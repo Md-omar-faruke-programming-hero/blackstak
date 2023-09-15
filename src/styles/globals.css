@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
   }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+
+  .custom-tooltip {
+    background-color: #FFF;
+    color: #000;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  /* Define the styles for the scrollbar */
+.scrollable-div::-webkit-scrollbar {
+  width: 2px; /* Adjust the width as needed */
+  height: 2px; /* Adjust the height as needed */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Define the styles for the scrollbar track */
+.scrollable-div::-webkit-scrollbar-track {
+  background: #F8F8F9; /* Background color of the track */
 }
+
+/* Define the styles for the scrollbar thumb (the draggable part) */
+.scrollable-div::-webkit-scrollbar-thumb {
+  background: #0060FF1A; /* Color of the thumb */
+  border-radius: 0px; /* Round the corners of the thumb */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; /* You may need to adjust this to control the spacing */
+}
+
+
+
